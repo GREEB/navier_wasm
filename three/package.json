@@ -1,0 +1,21 @@
+{
+  "name": "threejs-starter-vite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/three": "^0.149.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1"
+  },
+  "dependencies": {
+    "lil-gui": "^0.18.1",
+    "three": "^0.150.1",
+    "tweakpane": "^3.1.7"
+  }
+}

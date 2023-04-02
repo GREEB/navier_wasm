@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/threejs-icon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js + TypeScript + Vite</title>
+  </head>
+  <body>
+    <li id="html-file-links">
+    </li>
+    <script type="module">
+      const dirPath = new URL('.', import.meta.url).pathname;
+      const files = await import.meta.glob('/*.html');
+      const htmlFiles = Object.keys(files).map(file => file.substring(file.lastIndexOf('/') + 1));
+      const htmlLinks = htmlFiles.map(file => `<a href="${file}">${file.split('.')[0]}</a>`);
+      const htmlLinksString = htmlLinks.join('<br>\n');
+      document.getElementById('html-file-links').innerHTML = htmlLinksString;
+    </script>
+  </body>
+</html>
